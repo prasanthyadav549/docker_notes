@@ -1,0 +1,19 @@
+# docker build -t <image_name>:<tag_name>
+# docker rmi <image_name>  to delete the image
+# docker rm <container_id> to remove the container
+# docker system prune -a  to remove the cache
+# docker run -it --init --publish 3001:3000 <image_name>
+    here --publish flag is used to make 3001 of the host port to interact with the 
+    3000 of the container port.
+    --init flag is used like we can exit in the local emv that will replicated in the container also.
+# docker exec -it <image_name> bash
+# docker run -it --init -v "${PWD}:/usr/src/app" node-app this command bind mounts the 
+  the local app changes in the container directory here PWD will give the current working directory
+  and /usr/src/app is the directory of the container.
+# Learn about Docker volume
+# communication between two docker containers.
+  network bridge
+# docker compose
+# docker image prune --> remove all dangling images.
+#docker run --detach -it container --> if we want to run a container in background in interactive mode.
+

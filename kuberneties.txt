@@ -1,0 +1,6 @@
+## Architecture of kuberneties
+  1. Master Node (Orcestrator): it is a server it will not run any containers.
+     it will contain the information like these are the containers that i should 
+     run and these are the configurations of the containers. 
+
+  2. it will also know the worker nodes where these containers will run.

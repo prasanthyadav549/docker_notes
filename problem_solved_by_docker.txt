@@ -1,0 +1,35 @@
+# for example we have a microservices to deploy
+  each service has its own configurations like what language it is written and 
+  what version it requires how much memory etc.
+
+  when this code is passed to the devops person it will be hard for him to handle 
+  all this manually. 
+  1. Here docker is a tool which automates this process. and kuberneties is the orchestrator
+     which monitors this.
+  2. Using Docker we can automate the infrastructure.
+  3. It also removes the inconsistencies across the servers.
+
+
+# Explore about what is the difference between the docker and virtual machine.
+
+# Example: we have single server let's say s1.
+  in this s1 we deployed 2 applications 
+  Now the problem let's say application one need the python 3 and application 2
+  need python 3.7.
+  since these 2 are sharing the same resource might cause inconsistencies.
+  precisely when application 1 changes the python to 3 this will also effect the 
+  change in version in python for the application 2 which causes problems to the 
+  application 2.
+  ** SO USING THE DOCKER THIS PROBLEM IS SOLVED. **
+
+  # Docker Image: It is a snapshot or a blue print of a complete env for an application.
+                  it includes everything like what the application needs to run such as
+                  Libraries,dependencies,configurations etc.
+
+                  It kind of encapsulates the applicaiton and all the requirements together.
+  
+  # Container: container is an actual instance of an env configured by the Image.
+               when we run a docker image it creates a live and running container.
+               These containers are isolated and light weight Virtual machines.
+               a big difference between the container and the vm are containers share 
+               the host os kernel.
